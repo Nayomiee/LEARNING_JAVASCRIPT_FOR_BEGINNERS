@@ -410,12 +410,104 @@ if (age <18 || !hasID){
 }
 ```
 
+## LOOPS 
+
+#### FOR LOOPS - Used to execute a block of code repeatedly for a *specified number of times*.
+<strong>SYNTAX:</strong>
+
+```javascript
+for (initialization; condition; increment/decrement) {
+    //code to be executed   
+}
+//initialization sets a starting point for the loop
+//condition is checked before each iteration(cycle or repetition of a loop). if it is true, the loop continues and if it is false, the loop stops
+//increment/decrement - after each iteration, the value of the variable is changed by the increment/decrement operator
+```
+
+<strong>EXAMPLE:</strong>
+
+```javascript
+for (let i = 0; i < 5; i++) {
+    console.log("Number:" + i); //ouputs : Number:0, Number:1, Number:2, Number:3, Number:4
+}
+//let i=0 starts with i as 0
+//condition i<=5 checks if i is less than or equal to 5. if true, the loop continues otherwise it stops
+//iteration 1 - prints number 1 then updates to 2 (with the i++ as the increment operator)
+//then the condition is rechecked and the loop continues until i is no longer less than or equal to 5
+```
+#### WHILE LOOPS - Used to execute a block of code repeatedly while a specified condition is true.
+<strong>SYNTAX:</strong>
+
+```javscript
+while (condition) {
+    //code to be executed
+}
+```
+
+<strong>EXAMPLE:</strong>
+
+```javascript 
+let i = 0;
+while (i <= 5) {
+    console.log("Number:" + i); //outputs : Number:0, Number:1,
+    i++;
+}
+```
+
+#### DO-WHILE LOOP - Used to execute a block of code repeatedly while a specified condition is true.
+<strong>SYNTAX:</strong>
+
+```javascript
+do {
+    //code to be executed
+}while (condition);
+```
+
+<strong>EXAMPLE:</strong>
 
 
+```javascript
+let i = 0;
+do {
+    console.log("Number:" + i); //outputs : Number:0, Number:1,
+    i++;
+    } while (i <= 5);
+```    
 
+#### FOR...OF LOOP - used to iterate over iterable objects (arrays, sets, maps, etc.) and execute a block of code for each
+<strong>SYNTAX:</strong>
 
+```javascript
+for (let variable of iterable) {
+    //code to be executed
+}
+```
 
+<strong>EXAMPLE:</strong>
 
+```javascript
+let fruits =["apple", "banana", "cherry"];
+for (let fruit of fruits) {
+    console.log(fruit); //outputs : apple, banana, cherry
+}
+```
 
+#### FOR...IN LOOP - used to iterate over object properties and execute a block of code for each property
+<strong>SYNTAX:</strong>
 
+```javascript
+for (let property in object) {
+    //code to be executed
+}
+```
+<strong>EXAMPLE:</strong>
 
+```javascript
+let person = {
+    name: "John",
+    age: 30,
+    occupation: "Developer"
+};
+for (let key in person) {
+    console.log(key + ": " + person[key]); //outputs : name: John, age:30;
+}

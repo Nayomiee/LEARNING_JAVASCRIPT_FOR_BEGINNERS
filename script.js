@@ -117,58 +117,74 @@
 
 // CONDITIONAL STATEMENTS EXERCISES
 //else if statements
-let number = 0;
-if (number > 0){
-     console.log("Positive");
-}else if(number<0){
-     console.log("Negative");
-}else {
-     console.log("Zero")
-}
+// let number = 0;
+// if (number > 0){
+//      console.log("Positive");
+// }else if(number<0){
+//      console.log("Negative");
+// }else {
+//      console.log("Zero")
+// }
 
-//tenary operators
-let age =70;
-console.log(age>=60?"eligible for senior citizen discount":"not eligible for senior citizen discount")
+// //tenary operators
+// let age =70;
+// console.log(age>=60?"eligible for senior citizen discount":"not eligible for senior citizen discount")
 
-//if else if with logical operators
-let grade =50;
-if (grade >=90){
-     console.log("GRADE A");
-}else if(grade <=89 && grade>=80){
-     console.log("GRADE B");
-}else if(grade<=79 && grade>=70 ){
-     console.log("GRADE C");
-}else{
-     console.log("GRADE F");
-}
+// //if else if with logical operators
+// let grade =50;
+// if (grade >=90){
+//      console.log("GRADE A");
+// }else if(grade <=89 && grade>=80){
+//      console.log("GRADE B");
+// }else if(grade<=79 && grade>=70 ){
+//      console.log("GRADE C");
+// }else{
+//      console.log("GRADE F");
+// }
 
-let number2 = 15;
-if (number2>=10 && number2<=20){
-     console.log(true);
-}
-let stringData ="no";
-if (stringData == "yes" || stringData == "no"){
-     console.log(true);
-}
+// let number2 = 15;
+// if (number2>=10 && number2<=20){
+//      console.log(true);
+// }
+// let stringData ="no";
+// if (stringData == "yes" || stringData == "no"){
+//      console.log(true);
+// }
 
-//switch statements 
-let day =4;
-switch (day){
-     case 1:
-          console.log("monday")
-          break;
-     case 2:
-          console.log("tuesday")
-          break;
-     case 3:
-          console.log("wednesday")
-          break;
-     case 4:
-          console.log("thursday")
-          break;
-     case 5:
-          console.log("friday")
-          break;
-     default: 
-     console.log("Invalid Day");  
-}
+// //switch statements 
+// let day =4;
+// switch (day){
+//      case 1:
+//           console.log("monday")
+//           break;
+//      case 2:
+//           console.log("tuesday")
+//           break;
+//      case 3:
+//           console.log("wednesday")
+//           break;
+//      case 4:
+//           console.log("thursday")
+//           break;
+//      case 5:
+//           console.log("friday")
+//           break;
+//      default: 
+//      console.log("Invalid Day");  
+// }
+
+let person = {
+     name: "John",
+     age: 30,
+     occupation: "Developer"
+ };
+ for (let key in person) {
+     console.log(key + ": " + person[key]); //outputs : name: John, age:
+ }
+ 
+ let sum =0;
+ for (let i = 1; i<=5; i++){
+     sum += i;
+     console.log(sum)
+    // console.log(i);
+ }console.log("sum:", sum)
