@@ -244,6 +244,175 @@ console.log(!(age === 18)); //false(NOT)
    console.log(typeOf firstName)//string
    ```
 
+##### TYPE CONVERSION - TO CHANGE FROM ONE DATA TYPE TO ANOTHER
+- **IMPLICIT CONVERSION** - JS automatically converts data types
+- **EXPLICIT CONVERSION** - Manually convert data types using specifi methods
+
+```javascript
+console.log("5" + 3); //ouputs "53"
+console.log("5" - 3); //ouputs "2"
+console.log(true +2); //outputs 3(true changes to 1)
+console.log(false + "hello"); //falsehello(flase changes from boolean to string)
+```
+
+###### EXPLICIT CONVERSION
+- CONVERSION TO STRING - String() or .toString()
+```javascript
+let num =42;
+console.log(String(num)); //"42"
+console.log(num.toString()); //"42"
+```
+
+- CONVERTING TO NUMBER - parseInt() or parseFloat() or Number()
+```javascript
+let str ="123"
+console.log(Number(str)); //123
+console.log(parseInt("123.45")) //123
+console.log(parseFloat("123.45")) //123
+```
+- COVERTING TO BOOLEAN - Boolean()
+```javascript
+console.log(Boolean(0)); //false (0 is falsy)
+console.log(Boolean(1)); //true
+console.log(Boolean("hello")); //true
+console.log(Boolean("")); //false (empty string is falsy)
+```
+
+###### EDGE CASES
+- Strings can be converted to numbers 
+```javascript
+console.log(Number("hello")); // NaN(NOT A NUMBER)
+```
+- NULL converts to 0 when converting to a number
+```javascript 
+console.log(Number(null)); //0
+```
+- Undefined converts to Nan
+```javascript
+console.log(Number(undefined)); //NaN
+```
+
+## CONDITIONAL STATEMENTS - Makes decisions based on certain conditions. executes code blocks whether a condition is true or false
+
+#### if Statement
+<strong>Syntax: </strong>
+
+```javascript
+if (condition){
+    //code to be executed
+}else{
+    //code to be executed if the condition isn't met
+}
+```
+
+<strong>Example:</strong>
+
+```javascript
+let age =18; //declares and assigns a varialble
+if (age >= 18){
+    console.log("You are old enough"); //executes if age is greater than or equal to 18
+}else{
+    console.log("You are too young");
+}
+```
+#### if-else if Statement - for multiple conditions to check 
+<strong>Syntax</strong>
+
+```javascript
+if (condition1){
+    //code if condition 1 is true
+}else if(condition2){
+    //code if condition 2 is true
+}else{
+    //code if none is true
+}
+```
+
+<strong>Example:</strong>
+
+```javascript
+let score =75;
+if (score>=90){
+    console.log("a");
+}else if(score>=75){
+    console.log("b");
+}else if(score >= 50){
+    console.log("c");
+}else{
+    console.log("f");
+}
+```
+
+#### Ternary Operator - Used to simplify if-else statements
+<strong>SYNTAX:</strong>
+  
+  ```javascript
+  condition ? value_if_true : value_if_false
+  ```
+<strong>EXAMPLE:</strong>
+
+  ```JAVASCRIPT
+  let age = 18;
+  let message = age >= 18 ? "You are an adult" : "You are a minor";
+  console.log(message); // You are an adult
+  ```
+
+#### switch Statement
+<strong>SYNTAX:</strong>
+
+```javascript
+switch (expression){
+    case value1:
+        //code if expression === value1
+        break;
+    case value2:
+        // code if expression === value2
+        break;
+    default:
+        //code if no match    
+}
+```
+<strong>EXAMPLE:</strong>
+
+```javascript
+let day=3;
+switch(day){
+    case 1: 
+       console.log("Monday");
+       break;
+    case 2: 
+       console.log("Tuesday");
+       break;
+    case 3: 
+       console.log("Wednesday");
+       break;
+    default:
+        console.log("Invalid day");
+}
+```
+
+#### LOGICAL OPERATORS IN CONDITIONS
+- AND ( && )
+- OR ( || )
+- NOT ( ! )
+
+<strong>EXAMPLE:</strong>
+
+```javascript
+let age = 20;
+let hasID = true;
+
+if (age>=18 && hasID){
+    console.log("You can enter")
+}
+if (age <18 || !hasID){
+    console.log("You cannot enter")
+}
+```
+
+
+
+
 
 
 
